@@ -1,0 +1,14 @@
+Package containing simple implementations for some common data structures, done for simple academic purposes.
+
+Structures implemented:
+
+ > LinkedList
+ > Trie
+ > Tree
+ > Graph
+ > Stack
+ > Queue
+ > Heap
+ > Vector
+ > ArrayList
+ > HashTable
