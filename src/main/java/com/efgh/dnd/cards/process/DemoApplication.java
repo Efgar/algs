@@ -92,10 +92,11 @@ public class DemoApplication {
         */
         tzarneSpells.add("Disguise Self");
         tzarneSpells.add("Dancing Lights");
+        tzarneSpells.add("Faerie Fire");
         spellsToReturn.addAll(getFilteredSpellsByName(tzarneSpells, new CardOptions(Classes.WARLOCK)));
 
         //spellsToReturn.addAll(getFilteredSpellsByName(rauloSpells, new CardOptions(Classes.PALADIN)));
-        spellsToReturn.addAll(getFilteredSpells(Classes.PALADIN.getName(), "Conquest",0,1, new CardOptions(Classes.PALADIN)));
+        spellsToReturn.addAll(getFilteredSpells(Classes.PALADIN.getName(), "Conquest",0,2, new CardOptions(Classes.PALADIN)));
         spellsToReturn.addAll(getFilteredSpells(Classes.WARLOCK.getName(), "Great Old One",0,2, new CardOptions(Classes.WARLOCK)));
 
 

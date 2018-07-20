@@ -10,6 +10,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import org.apache.commons.lang3.BooleanUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.text.WordUtils;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
@@ -279,6 +281,9 @@ public class Spell {
         if(textToFormat == null){
             return "";
         }
+        textToFormat = textToFormat.replaceAll("(\\d+d{1}\\d+)", "<b><u>$1</u></b>");
+        textToFormat = textToFormat.replaceAll("save", "<b><u>save</u></b>");
+        textToFormat = textToFormat.replaceAll("(Wisdom|Strength|Charisma|Constitution|Dexterity|Intelligence) saving throw", "<b><u>$1 saving throw</u></b>");
         return "\"text | " + textToFormat.replace("\n", "\",\n    \"text | ") + "\"\n";
     }
 
