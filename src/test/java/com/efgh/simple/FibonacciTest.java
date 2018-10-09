@@ -1,21 +1,26 @@
-package com.efgh.structures.linkedlist;
+package com.efgh.simple;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-public class LinkedListTest {
-/*
+public class FibonacciTest {
+    Fibonacci fib = new Fibonacci();
+
     @Test
-    public void testListCreation(){
-        LinkedList list = new LinkedList("OMG");
-        Assert.assertEquals(list.getCurrentElement().getValue(), "OMG");
+    public void fibonacciPremisesTest (){
+        Assert.assertEquals(fib.fib(0), 0);
+        Assert.assertEquals(fib.fib(1), 1);
     }
 
     @Test
-    public void testNodeAddition(){
-        LinkedList list = new LinkedList("OMG");
-        list.addElement("BBQ");
-        Assert.assertEquals(list.getCurrentElement().getValue(), "BBQ");
-        Assert.assertEquals(list.getCurrentElement().getPreviousNode().getValue(), "OMG");
-    }*/
+    public void fibonacciBasicTest (){
+        Assert.assertEquals(fib.fib(2), 1);
+        Assert.assertEquals(fib.fib(6), 8);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void fibonacciNegativeValueTest (){
+        fib.fib(-1);
+    }
+
 }
